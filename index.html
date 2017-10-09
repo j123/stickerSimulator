@@ -20,12 +20,24 @@
     <canvas id="canvas" width="1400" height="800" style="border:1px solid; color:#D6D6D6"></canvas>
     <!-- sticker images -->
     <div id="stickerImages" style="display:none">
+      <img id="rezz" src="img/rezz.png">
+      <img id="deadmau5" src="img/deadmau5.png">
+      <img id="slipknot" src="img/slipknot.png">
       <img id="octocat" src="img/octocat.png">
       <img id="qiita" src="img/qiita.png">
       <img id="goodpatch" src="img/goodpatch.png">
       <img id="nodejs" src="img/nodejs.png">
       <img id="spring-boot" src="img/spring-boot.png">
       <img id="teamlab" src="img/teamlab.png">
+      <img id="cookpad" src="img/cookpad.png">
+      <img id="beats" src="img/beats.png">
+      <img id="supreme" src="img/supreme.png">
+      <img id="zeon" src="img/zeon.png">
+      <img id="aws" src="img/aws.png">
+      <img id="ustwo" src="img/ustwo.png">
+      <img id="cresco" src="img/cresco.png">
+      <img id="kuro" src="img/kuro.png">
+      <img id="but" src="img/but.png">
     </div>
 
     <script type="text/javascript">
@@ -33,16 +45,10 @@
       var canvas = new fabric.Canvas('canvas');
 
       // image instance
-      var stickers = ['octocat', 'qiita', 'goodpatch', 'nodejs', 'spring-boot', 'teamlab'];
+      var stickers = ['rezz', 'deadmau5', 'slipknot', 'octocat', 'qiita', 'goodpatch', 'nodejs', 'spring-boot', 'teamlab', 'cookpad', 'beats', 'supreme', 'zeon', 'aws', 'ustwo', 'cresco', 'kuro', 'but'];
       for (var i in stickers) {
         createImageInstance(canvas, stickers[i], 100 + i * 10, 1000);
       }
-      // createImageInstance(canvas, 'octocat', 100, 1000);
-      // createImageInstance(canvas, 'qiita', 150, 1000);
-      // createImageInstance(canvas, 'goodpatch', 200, 1000);
-      // createImageInstance(canvas, 'nodejs', 250, 1000);
-      // createImageInstance(canvas, 'spring-boot', 300, 1000);
-      // createImageInstance(canvas, 'teamlab', 350, 1000);
 
       canvas.isDrawingMode = false;
 
