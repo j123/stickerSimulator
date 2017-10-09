@@ -6,6 +6,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- load fabric.js-->
   <script type="text/javascript" src="./lib/fabric.min.js"></script>
+  <script type="text/javascript" src="./js/sticker.js"></script>
 </head>
 <body>
   <div style="background:url(./img/macbook.jpg) no-repeat">
@@ -32,59 +33,16 @@
       var canvas = new fabric.Canvas('canvas');
 
       // image instance
-      var imgElementOctocat = document.getElementById('octocat');
-      var imgInstanceOctocat = new fabric.Image(imgElementOctocat, {
-        left: 1000,
-        top: 100,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceOctocat);
-
-      var imgElementQiita = document.getElementById('qiita');
-      var imgInstanceQiita = new fabric.Image(imgElementQiita, {
-        left: 1200,
-        top: 100,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceQiita);
-
-      var imgElementGoodpatch = document.getElementById('goodpatch');
-      var imgInstanceGoodpatch = new fabric.Image(imgElementGoodpatch, {
-        left: 1000,
-        top: 200,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceGoodpatch);
-
-      var imgElementNodejs = document.getElementById('nodejs');
-      var imgInstanceNodejs = new fabric.Image(imgElementNodejs, {
-        left: 1200,
-        top: 200,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceNodejs);
-
-      var imgElementSpringBoot = document.getElementById('spring-boot');
-      var imgInstanceSpringBoot = new fabric.Image(imgElementSpringBoot, {
-        left: 1000,
-        top: 300,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceSpringBoot);
-
-      var imgElementTeamlab = document.getElementById('teamlab');
-      var imgInstanceTeamlab = new fabric.Image(imgElementTeamlab, {
-        left: 1200,
-        top: 300,
-        angle: 0,
-        opacity: 1.0
-      });
-      canvas.add(imgInstanceTeamlab);
+      var stickers = ['octocat', 'qiita', 'goodpatch', 'nodejs', 'spring-boot', 'teamlab'];
+      for (var i in stickers) {
+        createImageInstance(canvas, stickers[i], 100 + i * 10, 1000);
+      }
+      // createImageInstance(canvas, 'octocat', 100, 1000);
+      // createImageInstance(canvas, 'qiita', 150, 1000);
+      // createImageInstance(canvas, 'goodpatch', 200, 1000);
+      // createImageInstance(canvas, 'nodejs', 250, 1000);
+      // createImageInstance(canvas, 'spring-boot', 300, 1000);
+      // createImageInstance(canvas, 'teamlab', 350, 1000);
 
       canvas.isDrawingMode = false;
 
